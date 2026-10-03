@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>تذكيراتي</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap">
+<style>
+:root{--g:#22c55e;--a:#a3e635;--bg:#06120c;--c:rgba(255,255,255,.055);--t:#ecfdf5;--b:rgba(190,242,100,.16);--m:#8fb5a0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+body{margin:0;color:var(--t);font-family:Cairo,Tahoma,sans-serif;min-height:100vh;background:radial-gradient(900px 500px at 85% -10%,rgba(34,197,94,.28),transparent 60%),radial-gradient(700px 500px at 0 100%,rgba(163,230,53,.12),transparent 60%),var(--bg)}
+.w{max-width:820px;margin:auto;padding:0 14px 30px}
+.hero{position:relative;overflow:hidden;padding:26px 18px 30px}
+.brand{position:relative;display:flex;align-items:center;gap:16px;max-width:820px;margin:auto}
+.lg{width:78px;height:78px;flex:none;filter:drop-shadow(0 8px 22px rgba(34,197,94,.55))}
+.rg{transform-origin:32px 32px;animation:sp 24s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
+.hero h1{margin:0;font-size:44px;font-weight:900;line-height:1.1;background:linear-gradient(90deg,#d9f99d,#4ade80 60%,#22c55e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:4px 0 0;color:var(--m);font-size:14px}
+.lf{position:absolute;top:-20px;font-style:normal;font-size:20px;opacity:.5;animation:fall 8s linear infinite}@keyframes fall{to{transform:translateY(160px) rotate(280deg);opacity:0}}
+.card{background:var(--c);backdrop-filter:blur(14px);border:1px solid var(--b);border-radius:24px;padding:18px;margin:14px 0;animation:up .5s both}
+@keyframes up{from{opacity:0;transform:translateY(12px)}}
+.auth{max-width:440px;margin:auto}
+button{background:linear-gradient(135deg,var(--a),var(--g));color:#052e16;border:0;border-radius:40px;padding:11px 20px;font:inherit;font-weight:900;cursor:pointer;box-shadow:0 6px 20px rgba(163,230,53,.28);transition:.2s}
+button:hover{transform:translateY(-2px);filter:brightness(1.08)}button:disabled{opacity:.4}
+button.o{background:none;color:var(--a);border:1px solid var(--b);box-shadow:none}
+input,select{width:100%;padding:13px 16px;margin:6px 0;border:1px solid var(--b);border-radius:16px;background:rgba(0,0,0,.28);color:var(--t);font:inherit}
+input:focus,select:focus{outline:2px solid var(--a)}option{background:#0b2016}
+a{color:var(--a)}hr{border:0;border-top:1px solid var(--b);margin:14px 0}
+.card h3{text-align:center;font-size:24px;margin:0 0 8px}
+.prof{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.av{width:50px;height:50px;border-radius:18px;background:linear-gradient(135deg,var(--a),var(--g));color:#052e16;display:grid;place-items:center;font-size:24px;font-weight:900}
+.nm{flex:1;min-width:90px;display:flex;flex-direction:column}.nm small{color:var(--m)}
+.dr{--p:0;width:50px;height:50px;border-radius:50%;background:conic-gradient(var(--a) calc(var(--p)*1%),rgba(255,255,255,.1) 0);display:grid;place-items:center;position:relative}
+.dr:before{content:"";position:absolute;inset:5px;border-radius:50%;background:#0a1d13}.dr span{position:relative;font-size:12px;font-weight:900}
+.chip{background:rgba(253,224,71,.12);border:1px solid rgba(253,224,71,.4);color:#fde047;padding:8px 16px;border-radius:40px;font-weight:900}
+nav{position:sticky;top:8px;z-index:8;display:flex;gap:6px;overflow-x:auto;margin:10px 0;padding:6px;background:rgba(6,18,12,.8);backdrop-filter:blur(16px);border:1px solid var(--b);border-radius:40px}
+nav button,nav button:not(.on){flex:1;white-space:nowrap;background:none;color:var(--m);box-shadow:none;padding:9px 12px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:14px}
+nav button.on{background:linear-gradient(135deg,var(--a),var(--g));color:#052e16;box-shadow:0 4px 16px rgba(163,230,53,.35)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:12px}
+.it{position:relative;text-align:center;font-size:13px;padding:14px 8px;border-radius:20px;background:rgba(0,0,0,.25);border:1px solid var(--b);transition:.2s;cursor:default}
+.it:hover{transform:translateY(-4px)}.it b{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 6px;border-radius:50%;font-size:36px;background:radial-gradient(circle,rgba(163,230,53,.25),transparent 70%)}
+.it.sel{border-color:var(--a);box-shadow:0 0 0 3px rgba(163,230,53,.3),0 0 24px rgba(163,230,53,.25)}
+.it[data-r="ملحمي"]{border-color:#a855f7;box-shadow:0 0 18px rgba(168,85,247,.28)}
+.it[data-r="نادر"]{border-color:#38bdf8;box-shadow:0 0 18px rgba(56,189,248,.3)}
+.it[data-r="أسطوري"]{border-color:#fbbf24;background:linear-gradient(120deg,rgba(0,0,0,.25) 35%,rgba(251,191,36,.28) 50%,rgba(0,0,0,.25) 65%);background-size:250% 100%;animation:sh 3s linear infinite;box-shadow:0 0 22px rgba(251,191,36,.5)}
+@keyframes sh{to{background-position:-250% 0}}
+.it button{margin-top:6px;padding:6px 14px;font-size:12px}
+.شائعة{color:#86efac}.ملحمي{color:#c084fc}.نادر{color:#7dd3fc}.أسطوري{color:#fbbf24}
+.gold{background:linear-gradient(135deg,#fde047,#f59e0b);color:#451a03;padding:4px 11px;border-radius:30px;font-size:12px;font-weight:900}
+#bar{position:sticky;top:0;z-index:9;background:linear-gradient(90deg,#14532d,#15803d);color:#fff;text-align:center;padding:10px;display:none;font-size:20px;font-weight:900;border-bottom:1px solid var(--a)}
+#toast{position:fixed;bottom:22px;left:12px;right:12px;max-width:480px;margin:auto;background:#0f2a1b;border:1px solid var(--a);color:#fff;padding:14px;border-radius:20px;display:none;text-align:center;z-index:30;box-shadow:0 10px 40px rgba(0,0,0,.6)}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.big{font-size:90px;text-align:center;transition:transform 1s;transform-origin:bottom;filter:drop-shadow(0 10px 16px rgba(0,0,0,.5))}
+.ring{--p:0;width:250px;height:250px;margin:10px auto;border-radius:50%;background:conic-gradient(var(--a) calc(var(--p)*1%),rgba(255,255,255,.08) 0);display:grid;place-items:center;box-shadow:0 0 50px rgba(163,230,53,.28)}
+.ring .in{width:222px;height:222px;border-radius:50%;background:radial-gradient(circle at 50% 30%,#12351f,#06120c);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:22px;overflow:hidden}
+.ring .big{font-size:84px;line-height:1}.tt{font-size:32px;font-weight:900;color:var(--a);letter-spacing:2px}
+.forest{display:flex;flex-wrap:wrap;gap:4px;font-size:30px;margin-top:10px;padding:12px;border-radius:18px;background:linear-gradient(0deg,rgba(34,197,94,.22),transparent);min-height:50px}
+.days label{display:inline-block;margin:3px;font-size:13px;color:var(--m)}.days input{width:auto}
+.stat{flex:1;min-width:90px;text-align:center;font-size:13px;color:var(--m)}.stat b{display:block;font-size:30px;color:var(--a)}
+.cf{position:fixed;top:-30px;font-size:26px;z-index:40;animation:dn 2.5s linear forwards}@keyframes dn{to{transform:translateY(110vh) rotate(360deg)}}
+</style></head><body>
+<div id="bar"></div><div id="app"></div><div id="toast"></div>
+<script>
+const T=[["🌳","السنديان","شائعة"],["🌲","الصنوبر","شائعة"],["🌴","النخيل","شائعة"],["🌵","الصبار","شائعة"],["🎋","الخيزران","شائعة"],["🌿","الزيتون","شائعة"],["🍀","البرسيم","شائعة"],
+["🌸","الكرز","ملحمي"],["🌺","الهيبسكس","ملحمي"],["🎄","التنوب","ملحمي"],["🍁","القيقب","ملحمي"],["🍂","الدردار","ملحمي"],["🌻","الدوار","ملحمي"],
+["🍎","التفاح","نادر"],["🍊","البرتقال","نادر"],["🍋","الليمون","نادر"],["🥥","جوز الهند","نادر"],
+["🪷","اللوتس","أسطوري"],["🌈","قوس القزح","أسطوري"],["💎","الكريستال","أسطوري"]];
+const P={شائعة:150,ملحمي:350,نادر:500,أسطوري:800},DAYS=["أحد","اثنين","ثلاثاء","أربعاء","خميس","جمعة","سبت"];
+const ADMINS=["rawaf79000@gmail.com"];
+let db={users:{},cur:null,room:null};try{db=JSON.parse(localStorage.getItem("basim"))||db}catch(e){}
+db.maint=db.maint||{on:0,msg:""};
+const esc=t=>String(t||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const save=()=>{try{localStorage.setItem("basim",JSON.stringify(db))}catch(e){}};
+let adm=0,tab="focus",mode="login",pend=null,timer=null,sel=0,$=s=>document.querySelector(s);
+const U=()=>db.users[db.cur],today=()=>new Date().toDateString();
+function toast(m,ms=4000){let t=$("#toast");t.textContent=m;t.style.display="block";setTimeout(()=>t.style.display="none",ms)}
+function hero(){return`<div class="hero"><i class="lf" style="left:70%">🍃</i><i class="lf" style="left:15%;animation-delay:2s">🌿</i><i class="lf" style="left:45%;animation-delay:4s">🍃</i><div class="brand"><svg class="lg" viewBox="0 0 64 64"><defs><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9f99d"/><stop offset="1" stop-color="#22c55e"/></linearGradient><linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14532d"/><stop offset="1" stop-color="#052e16"/></linearGradient></defs><rect width="64" height="64" rx="20" fill="url(#b)"/><circle class="rg" cx="32" cy="32" r="26" fill="none" stroke="url(#a)" stroke-width="2.5" stroke-dasharray="3 6" stroke-linecap="round"/><path d="M32 52V38" stroke="#ca8a04" stroke-width="4.5" stroke-linecap="round"/><circle cx="23" cy="34" r="7" fill="#16a34a"/><circle cx="41" cy="34" r="7" fill="#4ade80"/><circle cx="32" cy="27" r="11" fill="url(#a)"/><path d="M32 27v-7M32 27l6 3.5" stroke="#052e16" stroke-width="2.6" stroke-linecap="round"/><circle cx="32" cy="27" r="1.8" fill="#052e16"/><circle cx="32" cy="7" r="3" fill="#fde047"/></svg><div><h1>تذكيراتي</h1><p>ذاكر · ذكّر نفسك · ازرع غابتك</p></div></div></div>`}
+function render(){
+ if(db.maint.on&&!(db.cur&&U()&&U().admin)){$("#app").innerHTML=hero()+(adm&&!db.cur?auth():`<div class="w auth"><div class="card" style="text-align:center"><div style="font-size:60px">🛠️</div><h3>الموقع تحت الصيانة</h3><p>${esc(db.maint.msg)||"نرجع لكم قريباً"}</p>${db.cur?'<button class="o" onclick="out()">خروج</button>':'<button class="o" onclick="adm=1;render()">دخول المشرف</button>'}</div></div>`);return}
+ if(!db.cur){$("#app").innerHTML=hero()+auth();return}
+ let u=U();if(ADMINS.includes(u.email))u.admin=1;let n=u.sess[today()]||0;
+ let tabs=[["focus","🌱 جلسة"],["group","👥 جماعية"],["shop","🛒 المتجر"],["rem","⏰ تذكيرات"]];if(u.admin)tabs.push(["adm","🛡️ الأدمن"]);
+ $("#app").innerHTML=hero()+`<div class="w"><div class="card prof"><div class="av">${u.name[0]}</div><div class="nm"><b>${u.name}${u.admin?" 🛡️":""}</b><small>جلسات اليوم</small></div><div class="dr" style="--p:${Math.min(n,5)*20}"><span>${Math.min(n,5)}/5</span></div>${n>5?`<span class="gold">⭐ +${n-5}</span>`:""}<div class="chip">🪙 ${u.coins}</div><button class="o" onclick="out()">خروج</button></div>
+ <nav>${tabs.map(t=>`<button class="${tab==t[0]?"on":""}" onclick="tab='${t[0]}';render()"><span>${t[1].split(" ")[0]}</span>${t[1].split(" ")[1]}</button>`).join("")}</nav><div id="main">${view()}</div></div>`}
+function auth(){
+ if(mode=="forgot")return`<div class="w auth"><div class="card"><h3>نسيت كلمة المرور</h3><input id="em" type="email" placeholder="بريدك الإلكتروني"><button onclick="fg()" style="width:100%">إرسال الرمز</button><p style="text-align:center"><a href="#" onclick="mode='login';render();return false">رجوع</a></p></div></div>`;
+ if(mode=="reset")return`<div class="w auth"><div class="card"><h3>كلمة مرور جديدة</h3><p style="text-align:center;color:var(--m)">رمزك يظهر هنا:</p><div class="chip" style="text-align:center;font-size:32px;letter-spacing:6px;margin:8px 0">${pend.code}</div><input id="cd" placeholder="الرمز" inputmode="numeric"><input id="pw" type="password" placeholder="كلمة المرور الجديدة"><button onclick="rs()" style="width:100%">تغيير كلمة المرور</button></div></div>`;
+ if(mode=="code")return`<div class="w auth"><div class="card"><h3>رمز التحقق</h3><p style="text-align:center;color:var(--m)">الموقع ما يرسل إيميل حالياً، فرمزك يظهر هنا:</p><div class="chip" style="text-align:center;font-size:32px;letter-spacing:6px;margin:8px 0">${pend.code}</div><input id="cd" placeholder="الرمز" inputmode="numeric"><button onclick="verify()">تأكيد</button></div></div>`;
+ let s=mode=="signup";
+ return`<div class="w auth"><div class="card"><h3>${s?"إنشاء حساب":"تسجيل الدخول"}</h3>${s?'<input id="nm" placeholder="الاسم">':""}<input id="em" type="email" placeholder="البريد الإلكتروني"><input id="pw" type="password" placeholder="كلمة المرور"><button onclick="${s?"signup()":"login()"}" style="width:100%">${s?"إنشاء الحساب":"تسجيل الدخول"}</button>
+ <p style="text-align:center">${s?`عندك حساب؟ <a href="#" onclick="mode='login';render();return false">تسجيل دخول</a>`:`ما عندك حساب؟ <a href="#" onclick="mode='signup';render();return false">إنشاء حساب</a><br><a href="#" onclick="mode='forgot';render();return false">نسيت كلمة المرور؟</a>`}</p></div></div>`}
+const v=id=>$("#"+id).value.trim();
+function sendCode(u){pend={email:u.email,code:String(Math.floor(1e5+Math.random()*9e5))};mode="code";render();toast("📧 رمزك (تجريبي، بدون خادم بريد): "+pend.code,20000)}
+function signup(){let e=v("em").toLowerCase();if(!v("nm")||!e||v("pw").length<4)return toast("عبّي كل الحقول (كلمة المرور 4+)");if(db.users[e])return toast("الحساب موجود");
+ let first=!Object.keys(db.users).length;db.users[e]={name:v("nm"),email:e,pw:v("pw"),coins:0,owned:[0],sess:{},rem:[],admin:first||ADMINS.includes(e)?1:0};save();sendCode(db.users[e])}
+function login(){let u=db.users[v("em").toLowerCase()];if(!u||u.pw!=v("pw"))return toast("بيانات غير صحيحة");sendCode(u)}
+function verify(){if(v("cd")!=pend.code)return toast("الرمز خطأ");db.cur=pend.email;u=U();u.on=Date.now();mode="login";save();render()}
+function fg(){let e=v("em").toLowerCase();if(!db.users[e])return toast("ما فيه حساب بهذا الإيميل");pend={email:e,code:String(Math.floor(1e5+Math.random()*9e5))};mode="reset";render()}
+function rs(){if(v("cd")!=pend.code)return toast("الرمز خطأ");if(v("pw").length<4)return toast("كلمة المرور 4 أحرف أو أكثر");db.users[pend.email].pw=v("pw");save();mode="login";render();toast("تم التغيير، سجّل دخولك الحين")}
+function out(){U().on=0;db.cur=null;save();render()}
+function view(){let u=U();
+ if(tab=="shop")return`<div class="card"><b>متجر الأشجار</b> 🪙 ${u.coins}</div>`+["شائعة","ملحمي","نادر","أسطوري"].map(c=>`<div class="card"><b class="${c}">${c} — ${P[c]} 🪙</b><div class="grid" style="margin-top:8px">${T.map((t,i)=>t[2]==c?`<div class="it" data-r="${c}"><b>${t[0]}</b>${t[1]}<br>${u.owned.includes(i)?"✅ مملوكة":`<button onclick="buy(${i})">شراء</button>`}</div>`:"").join("")}</div></div>`).join("");
+ if(tab=="rem")return`<div class="card"><b>تذكير جديد</b><input id="rt" placeholder="عنوان التذكير"><input id="rd" type="number" min="1" placeholder="كل كم دقيقة يذكّرني؟">
+  <select id="rk" onchange="$('#dys').style.display=this.value=='d'?'none':'block'"><option value="d">يومياً</option><option value="c">أيام محددة</option></select>
+  <div id="dys" class="days" style="display:none">${DAYS.map((d,i)=>`<label><input type="checkbox" value="${i}"> ${d}</label>`).join("")}</div>
+  <select id="ra" onchange="$('#tm').style.display=this.value=='a'?'none':'flex'"><option value="a">طول الوقت</option><option value="t">أوقات محددة</option></select>
+  <div id="tm" style="display:none;gap:8px"><input id="f" type="time" value="08:00"><input id="to" type="time" value="22:00"></div><button onclick="addRem()">إضافة</button></div>`+
+  u.rem.map((r,i)=>`<div class="card row"><span>⏰ ${r.t} — كل ${r.d} د — ${r.days?r.days.map(x=>DAYS[x]).join("،"):"يومياً"} — ${r.f?r.f+"→"+r.to:"طول الوقت"}</span><button class="o" onclick="U().rem.splice(${i},1);save();render()">حذف</button></div>`).join("");
+ if(tab=="group"){let r=db.room;return`<div class="card"><b>👥 مذاكرة جماعية</b><p>أنشئ جلسة بمدة تحددها، وشارك الرمز مع أصدقائك.</p><input id="gm" type="number" min="1" value="25" placeholder="المدة بالدقائق"><button onclick="mkRoom()">إنشاء جلسة</button>
+  <hr><input id="gc" placeholder="رمز الجلسة"><button class="o" onclick="joinRoom()">انضمام</button></div>`+(r?`<div class="card">الجلسة <b>${r.code}</b> — ${r.min} دقيقة — المشاركون: ${r.m.join("، ")}</div>`:"")+`<p style="font-size:12px">ملاحظة: الجلسة تتزامن بين نوافذ نفس المتصفح فقط (بدون خادم).</p>`}
+ if(tab=="adm"){let us=Object.values(db.users),on=us.filter(x=>x.on&&Date.now()-x.on<864e5);
+  return`<div class="card"><b>🔒 وضع الصيانة</b> ${db.maint.on?"— مفعّل 🔴":"— مطفأ 🟢"}<input id="mm" placeholder="اكتب رسالة الصيانة للمستخدمين" value="${esc(db.maint.msg)}"><button onclick="maint()" style="width:100%">${db.maint.on?"فتح الموقع":"قفل الموقع"}</button><small style="color:var(--m)">الأدمن يدخل ويستخدم الموقع عادي حتى وهو مقفول.</small></div><div class="card row"><div class="stat"><b>${us.length}</b>👤 المسجلون</div><div class="stat"><b>${on.length}</b>🟢 داخلون</div><div class="stat"><b>${us.reduce((a,x)=>a+x.rem.length,0)}</b>🎯 أهداف</div></div><div class="card"><b>الأسماء</b>`+us.map(x=>`<div class="row"><span>${x.name}${x.admin?" 🛡️":""} (${x.email})</span><span>📚${Object.values(x.sess).reduce((a,b)=>a+b,0)} | 🪙${x.coins} | ${x.on?"🟢":"⚪"} | ${x.rem.length} هدف ${x.admin?"":`<button class="o" style="padding:3px 10px" onclick="delU('${x.email}')">حذف</button>`}</span></div>`).join("")+`</div><p style="font-size:12px">البيانات من هذا المتصفح فقط.</p>`}
+ if(timer)return`<div class="card"><div class="ring" id="rg"><div class="in"><div class="big" id="gt">${T[timer.tree][0]}</div><div class="tt" id="tt"></div></div></div><p style="text-align:center">شجرتك تكبر... لا تطلع من الجلسة 🌱</p></div>`;
+ return`<div class="card"><b>اختر الشجرة</b><div class="grid" style="margin:8px 0">${u.owned.map(i=>`<div class="it ${sel==i?"sel":""}" onclick="sel=${i};render()"><b>${T[i][0]}</b>${T[i][1]}</div>`).join("")}</div>
+ <input id="mn" type="number" min="1" value="25" placeholder="المدة بالدقائق"><button style="width:100%" onclick="start()" ${timer?"disabled":""}>ابدأ الجلسة 🌱</button></div><div class="card"><b>🌲 غابتي (${(u.forest||[]).length})</b><div class="forest">${(u.forest||[]).map(i=>`<span>${T[i][0]}</span>`).join("")||"<small>ابدأ جلسة وازرع أول شجرة!</small>"}</div></div>`}
+function confetti(){for(let i=0;i<30;i++){let e=document.createElement("div");e.className="cf";e.textContent=["🌳","🌿","⭐","🪙","🍀"][i%5];e.style.left=Math.random()*100+"vw";e.style.animationDelay=Math.random()+"s";document.body.appendChild(e);setTimeout(()=>e.remove(),4000)}}
+function maint(){db.maint.msg=v("mm");db.maint.on=db.maint.on?0:1;save();render()}
+function delU(e){if(confirm("حذف هذا الحساب؟")){delete db.users[e];save();render()}}
+function buy(i){let u=U(),p=P[T[i][2]];if(u.coins<p)return toast("كوينزك ما يكفي");u.coins-=p;u.owned.push(i);save();render()}
+function addRem(){let u=U(),d=+v("rd");if(!v("rt")||!d)return toast("اكتب العنوان والمدة");let days=v("rk")=="c"?[...document.querySelectorAll("#dys input:checked")].map(x=>+x.value):null;
+ u.rem.push({t:v("rt"),d,days,f:v("ra")=="t"?v("f"):0,to:v("to"),last:Date.now()});save();render()}
+function start(min,group){min=min||+v("mn");if(!min)return;if(Notification&&Notification.permission=="default")Notification.requestPermission();timer={end:Date.now()+min*6e4,tree:sel,min,group};$("#bar").style.display="block";tick();render()}
+function tick(){if(!timer)return;let s=Math.ceil((timer.end-Date.now())/1e3);
+ if(s<=0){let u=U(),k=today();u.sess[k]=(u.sess[k]||0)+1;u.coins+=300;(u.forest=u.forest||[]).push(timer.tree);let g=u.sess[k]>5;timer=null;$("#bar").style.display="none";save();confetti();toast((g?"⭐ جلسة إضافية! ":"🌳 ")+"أنجزت الجلسة +300 🪙");render();return}
+ let pr=1-s/(timer.min*60),g=$("#gt");if(g){g.style.transform="scale("+(.35+.65*pr)+")";$("#rg").style.setProperty("--p",pr*100);$("#tt").textContent=String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")}let m=Math.floor(s/60);$("#bar").innerHTML=`${T[timer.tree][0]} ${String(m).padStart(2,"0")}:${String(s%60).padStart(2,"0")} <button class="o" style="color:#fff;border-color:#fff;padding:2px 8px" onclick="timer=null;$('#bar').style.display='none';render()">إيقاف</button>`}
+function mkRoom(){let m=+v("gm");if(!m)return;db.room={code:String(Math.floor(1e3+Math.random()*9e3)),min:m,m:[U().name],end:Date.now()+m*6e4};save();toast("رمز الجلسة: "+db.room.code,9000);start(m,1)}
+function joinRoom(){let r=db.room;if(!r||r.code!=v("gc"))return toast("رمز غير صحيح");if(!r.m.includes(U().name))r.m.push(U().name);save();let left=(r.end-Date.now())/6e4;if(left<=0)return toast("انتهت الجلسة");start(left,1)}
+setInterval(()=>{tick();if(!db.cur)return;let u=U(),n=new Date(),hm=n.toTimeString().slice(0,5);
+ u.rem.forEach(r=>{if(r.days&&!r.days.includes(n.getDay()))return;if(r.f&&(hm<r.f||hm>r.to))return;
+ if(Date.now()-r.last>=r.d*6e4){r.last=Date.now();save();toast("⏰ "+r.t,8000);try{new Notification("تذكيراتي",{body:r.t})}catch(e){}}})},1000);
+render();
+</script></body></html>
